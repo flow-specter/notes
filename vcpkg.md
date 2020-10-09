@@ -4,9 +4,11 @@
 
 我的vs版本本身是2013的，但是下载的vcpkg仿佛不能够使用vs2013，于是我又换了vs2019（事实上vcpkg只支持vs2015以上的版本），但是语言包只安装了中文的，而vcpkg需要其变换为英文，我又将其变成了英文，具体的问题描述及语言包安装见 [vcpkg报错 could not locate a complete toolset](https://zhuanlan.zhihu.com/p/120183174)  以及[Visual Studio 2019 更改语言包](https://zhuanlan.zhihu.com/p/120183174)两个参考链接。
 
-## 搭配cmake使用
+## 2. 搭配cmake使用
 
-[参考链接](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake-toolchain-file)
+[参考链接： github vcpkg说明](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md#cmake-toolchain-file)
+
+[参考链接： 微软官方文档](https://docs.microsoft.com/en-us/cpp/build/vcpkg?view=vs-2019)
 
 搭配cmake使用安装的库的最好的方式就是通过toolchain文件，scripts\buildsystems\vcpkg.cmake（本地位置在：E:\vcpkg\scripts\buildsystems\vcpkg.cmake）。
 
@@ -34,3 +36,4 @@
    ```
 
    （我在.json文件中加入变量后去`include`库的时候，仍然提示找不到错误，我一度以为是vcpkg出了什么问题，或者是cmake哪里没搞懂，但事实上是我include的地方错了，所以小白读者或许可以和我一样去查看一下include的位置到底有没有那个库。）
+
