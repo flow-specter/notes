@@ -1,12 +1,32 @@
 # git
 
+## 常用命令
+
+1. 添加
+
+`git add .`
+
+2. 上传
+
+`git commit -m 'XXX'`
+
+3. push到远程仓库
+
+`git push -u origin master`或者`git push -u origin main`
+
+
+
 ## ignoring files
 
 https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files
 
-有C++、cmake的模板之类的，但是没太看懂。
+有C++、cmake的模板之类的。
 
+**2020.10.9 14:53:** 有效。
 
+- **语法：**
+
+https://www.jianshu.com/p/ea6341224e89
 
 ## vs2019中的git
 
